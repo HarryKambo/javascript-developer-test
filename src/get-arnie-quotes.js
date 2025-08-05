@@ -2,7 +2,7 @@ const { httpGet } = require('./mock-http-interface');
 
 const getArnieQuotes = async (urls) => {
   // TODO: Implement this function.  
-  var promiseArray = await getArnieQuotesPromisesArray(urls);
+  var promiseArray = getArnieQuotesPromisesArray(urls);
   var result = [];
   await Promise.allSettled(promiseArray)
           .then((values) => {
